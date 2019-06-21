@@ -6,12 +6,15 @@ import { WithSideMenuComponent } from './directives/with-side-menu/with-side-men
 import { WithoutSideMenuComponent } from './directives/without-side-menu/without-side-menu.component';
 import { IonicModule } from '@ionic/angular';
 import { RefreshComponent } from './directives/refresh/refresh.component';
+import { GridModule } from '@progress/kendo-angular-grid';
+
 
 @NgModule ({
     imports: [
         ReactiveFormsModule,
         NgMultiSelectDropDownModule.forRoot(),
         IonicModule,
+        GridModule,
     ],
     declarations: [
         WithSideMenuComponent,
@@ -24,7 +27,8 @@ import { RefreshComponent } from './directives/refresh/refresh.component';
         WithSideMenuComponent,
         WithoutSideMenuComponent,
         IonicModule,
-        RefreshComponent
+        RefreshComponent,
+        GridModule,
     ],
     providers: [
         AlertService
