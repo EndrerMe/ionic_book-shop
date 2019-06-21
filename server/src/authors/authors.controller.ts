@@ -2,9 +2,9 @@
 import { Controller, Body, Post, Get } from '@nestjs/common';
 
 // Services
-import { AuthorsService } from 'src/authors/authors.service';
+import { AuthorsService } from './authors.service';
 // Interfaces
-import { IAuthor } from 'src/authors/Interfaces/IBook';
+import { IAuthor } from './Interfaces/IBook';
 
 @Controller('authors')
 export class AuthorsController {

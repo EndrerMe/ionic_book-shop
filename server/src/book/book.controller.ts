@@ -2,10 +2,11 @@
 import { Controller, Get, Param, Post, Body } from '@nestjs/common';
 
 // Interfaces
-import { IBook } from 'src/book/interfaces/IBook';
+import { IBook } from './interfaces/IBook';
 // Services
-import { BookService } from 'src/book/book.service';
-import { BookDTO } from 'src/book/dto/book.dto';
+import { BookService } from './book.service';
+// DTO
+import { BookDTO } from './dto/book.dto';
 
 @Controller('books')
 export class BookController {

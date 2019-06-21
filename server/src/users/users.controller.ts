@@ -1,10 +1,10 @@
 // Vendors
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Post, Body } from '@nestjs/common';
 
 // Services
-import { UsersService } from 'src/users/users.service';
+import { UsersService } from './../users/users.service';
 // Interfaces
-import { IUsers } from 'src/users/model/users.model';
+import { IUsers } from './../users/model/users.model';
 
 @Controller('users')
 export class UsersController {

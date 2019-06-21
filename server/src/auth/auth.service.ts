@@ -8,7 +8,7 @@ import { JwtService } from '@nestjs/jwt';
 // Interfaces
 import { IAuth } from './Interfaces/IAuth';
 // Strategy
-import { JwtPayload } from 'src/strategy/interfaces/jwt.model';
+import { JwtPayload } from './../strategy/interfaces/jwt.model';
 
 
 @Injectable()
