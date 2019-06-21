@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <app-with-side-menu></app-with-side-menu>
+      <ion-title>catalog</ion-title>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="catalog">
+      <ion-icon ios="ios-book" md="md-book"></ion-icon>
+      <ion-label>Catalog</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="auth" [hidden]="isUser">
+      <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+      <ion-label>Authentication</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="shopping-bag">
+      <ion-badge color="danger">{{ bagLength }}</ion-badge>
+      <ion-icon ios="ios-basket" md="md-basket"></ion-icon>
+      <ion-label>Shopping bag</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="admin"
+    [hidden]="showAdminBunc">
+      <ion-icon ios="ios-build" md="md-build"></ion-icon>
+      <ion-label>Admin bunc</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>  
+
+</ion-tabs>

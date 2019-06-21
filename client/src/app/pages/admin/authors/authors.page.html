@@ -1,0 +1,51 @@
+<ion-content>
+    <app-refresh></app-refresh>
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+
+        <section class="editAuthors">
+            <button type="button" (click)="showModalAddNewAuthor()" class="btn btn-info">Добавить автора</button>
+            <div class="allAuthors" *ngFor="let author of authors">
+              <div class="author">
+                <h4 class="author__name">{{ author.name }}</h4>
+                <span class="author__Show" (click)="showAuthorInfo(author.id)">Показать</span>
+              </div>
+              <div class="authorInfo" [hidden]="visibility !== author.id">
+                <span class="changeAuthor" (click)="openModal(author)">Изменить</span>
+                <span class="deleteAuthor" (click)="deleteAuthor(author)">Удалить</span>
+              </div>
+            </div>
+        
+            <div class="changeAuthorName" [hidden]="!newAuthorModal">
+              <div class="main">
+                <div class="close" (click)="closeNewAuthorModal()">
+                  <span class="clos__line"></span>
+                </div>
+                <div class="form-group form__el modalAuthorName">
+                  <input type="text" placeholder="Имя автора" #newAuthor>
+                  <button (click)="addAuthor(newAuthor.value)" type="submit">Добавить</button>
+                </div>
+              </div>
+            </div> 
+        
+            <div class="modal" [hidden]="!authorNameModalVisibility">
+              <div class="main">
+                  <div class="close" (click)="closeAuthorNameModal()">
+                    <span class="clos__line"></span>
+                  </div>
+                  <div class="form-group form__el modalAuthorName">
+                    <input type="text" placeholder="Имя автора"  #newAuthorName>
+                    <button (click)="changeName(newAuthorName.value)" type="submit">Изменить</button>
+                  </div>
+              </div>
+            </div>
+                
+        </section>
+        
+
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+</ion-content>

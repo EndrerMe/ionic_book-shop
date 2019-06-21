@@ -1,0 +1,44 @@
+<ion-menu contentId="content">
+
+  <ion-content>
+    <ion-list>
+      <ion-icon ios="ios-log-out"
+      md="md-log-out" (click)="signOut()" [hidden]="!currentUser"></ion-icon>
+      <ion-menu-toggle class="avatar" 
+      [hidden]="!currentUser" 
+      lines="none" auth-hide="false">
+        <ion-avatar>
+          <img (click)="goToUserArea()" 
+          [src]="avatarUrl"
+          id="avatarImage">
+        </ion-avatar>
+        <strong class="userName">{{ userName }}</strong>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle auth-hide="false" *ngFor="let page of common">
+        <ion-item detail
+        [routerLink]="page.url"
+        routerDirection="root">
+          {{ page.title }}
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle auth-hide="false" [hidden]="!user">
+          <ion-item detail
+          [routerLink]="auth.url"
+          routerDirection="root">
+            {{ auth.title }}
+          </ion-item>
+        </ion-menu-toggle>
+      <ion-menu-toggle auth-hide="false" *ngFor="let page of admin" [hidden]="!userAdmin">
+          <ion-item detail
+          [routerLink]="page.url"
+          routerDirection="root">
+            {{ page.title }}
+          </ion-item>
+        </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- <ion-router-outlet id="content" main></ion-router-outlet> -->

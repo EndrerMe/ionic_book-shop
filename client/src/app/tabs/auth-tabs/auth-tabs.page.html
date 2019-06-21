@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <app-without-side-menu></app-without-side-menu>
+      <ion-title>{{ pageTitle }}</ion-title>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-tabs>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="login" (click)="changePageTitle(Login.el.innerText)">
+        <ion-icon name="flash"></ion-icon>
+        <ion-label #Login>Login</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="registration" (click)="changePageTitle(Regist.el.innerText)">
+        <ion-icon name="contact"></ion-icon>
+        <ion-label #Regist>Registration</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="catalog">
+        <ion-icon name="desktop"></ion-icon>
+        <ion-label>Catalog</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>  
+  
+  </ion-tabs>
+  

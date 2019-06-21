@@ -1,0 +1,37 @@
+ion-content {
+
+    .logOut {
+        width: 35px;
+        height: 35px;
+        margin: 15px 0 0 85%;
+    }
+
+    .avatar {
+        position: relative;
+        width: 100%;
+        text-align: center;
+
+        ion-avatar {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+
+        .userName {
+            margin-top: 15px;
+        }
+    }
+
+    ion-list {
+        margin-top: 45px;
+        height: 100%;
+
+        ion-item {
+            margin-top: 10px;
+
+            ion-label {
+                margin-left: 20px;
+            }
+        }
+    }
+}

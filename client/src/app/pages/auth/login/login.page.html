@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <app-without-side-menu></app-without-side-menu>
+      <ion-title>login</ion-title>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-refresh></app-refresh>
+  <section class="login">
+    <form [formGroup]="loginForm" 
+    (submit)="login()">
+      <div class="form-group form__el">
+        <ion-input type="text" formControlName="userName" placeholder="Имя"></ion-input>
+      </div>
+      <div class="form-group form__el">
+        <ion-input type="password" formControlName="userPassword" placeholder="Пароль"></ion-input>
+      </div>
+      <ion-button class="login__btn" (click)="login()">Войти</ion-button>
+    </form>
+  </section>
+  
+</ion-content>

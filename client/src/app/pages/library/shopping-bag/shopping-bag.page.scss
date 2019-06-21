@@ -1,0 +1,92 @@
+.bag {
+    text-align: center;
+
+    h4 {
+        margin-top: 70px;
+    }
+
+    .bag__catalog {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+
+        .bagBook {
+            position: relative;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            max-width: 400px;
+            width: 300px;
+            padding: 10px 0 20px 0;
+            flex-direction: column;
+            word-wrap: break-word;
+            margin: 30px 0 0 10px;
+            background-color: #f3f3f3;
+
+            .quantity {
+                max-width: 45px;
+                max-height: 25px;
+                margin-left: 5%;
+            }
+
+            .book__info {
+                margin-top: 30px;
+            }
+
+            .book__price {
+                margin-top: 20px;
+            }
+
+            .deleteFromBag{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-self: flex-end;
+                position: relative;
+                width: 30px;
+                height: 30px;
+                margin: -25px 0 0 95%;
+                border-radius: 50%;
+
+                span,
+                span::after {
+                    display: block;
+                    width: 20px;
+                    height: 3px;
+                    background-color: red;
+                    transform: rotate(45deg);
+                }
+
+                span::after {
+                    content: "";
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+
+    .bag__clear {
+        margin: 100px auto;
+    }
+
+    .bag__clear button {
+        background-color: #ff3232;
+        width: 170px;
+        height: 35px;
+        color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .bag__clear button:hover {
+        background-color: #ff1616;
+        width: 175px;
+        height: 40px;
+        border-radius: 5px;
+    }
+    
+}

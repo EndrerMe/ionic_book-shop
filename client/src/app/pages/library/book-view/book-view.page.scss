@@ -1,0 +1,31 @@
+.bookView {
+    position: relative;
+    top: 50px;
+
+    button {
+        bottom: 7%;
+        padding: 5px 25px 5px 25px;
+        background-color: #00ce00;
+        outline: none;
+        border: none;
+        color: #000000;
+        cursor: pointer;
+        transition: .3s;
+    }
+    
+    button:hover {
+        background-color: #01ff01;
+    }
+
+    .bookView__info {
+        margin-top: 35px;
+    }
+
+    .bookView__type {
+        margin-top: 15px;
+    }
+
+    ion-button {
+        margin-top: 30px;
+    }
+}

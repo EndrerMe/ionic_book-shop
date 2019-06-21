@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <app-with-side-menu></app-with-side-menu>
+      <ion-title>{{ pageTitle }}</ion-title>
+    </ion-row>   
+  </ion-toolbar>
+</ion-header>
+
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button tab="users" (click)="changePageTitle(Users.el.innerText)">
+      <ion-icon name="body"></ion-icon>
+      <ion-label #Users>Users</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="books" (click)="changePageTitle(Books.el.innerText)">
+      <ion-icon name="book"></ion-icon>
+      <ion-label #Books>Books</ion-label>
+    </ion-tab-button>
+
+      <ion-tab-button tab="authors" (click)="changePageTitle(Authors.el.innerText)">
+        <ion-icon name="brush"></ion-icon>
+        <ion-label #Authors>Authors</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="catalog">
+        <ion-icon name="desktop"></ion-icon>
+        <ion-label>Catalog</ion-label>
+      </ion-tab-button>
+
+  </ion-tab-bar>  
+
+</ion-tabs>
+  

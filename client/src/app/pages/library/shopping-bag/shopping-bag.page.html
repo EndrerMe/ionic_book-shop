@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <app-without-side-menu></app-without-side-menu>
+      <ion-title>Shopping bag</ion-title>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-refresh></app-refresh>
+
+  <section class="bag">
+    <h2 class="bag__title">Корзина</h2>
+    <h4 [hidden]="!visibility">Ваша коризна пуста, перейти в <a href="" (click)="goToCatalog()">каталог</a>?</h4>
+    <div class="bag__catalog">
+         <ion-card class="bagBook" *ngFor="let book of bag">
+            <ion-card-content>
+                <div class="deleteFromBag"
+                (click)="deleteFromBag(book.id)">
+                  <span></span>
+                </div>
+                <ion-card-title class="book__title">{{ book.name }}</ion-card-title>
+                <p class="book__info">{{ book.description }}</p>
+                <p class="book__price">Цена: {{ book.price * book.value }}$</p>
+                <div>
+                    <span>Количество:</span>
+                    <input class="quantity" (change)="changePrice(book, value.value)" type="number" change value={{book.value}} #value/>
+                </div>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <div class="bag__clear">
+        <button [hidden]="visibility" (click)="clearBag()">Очистить корзину</button>
+    </div>
+  </section>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <app-without-side-menu></app-without-side-menu>
+      <ion-title>{{ book.name }}</ion-title>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-refresh></app-refresh>
+  <ion-card class="bookView">
+    <ion-card-content >
+        <ion-card-title class="bookView__title">{{ book.name }}</ion-card-title>
+        <p class="bookView__info">{{ book.description }}</p>
+        <p class="bookView__type">Тип: {{ book.type }}</p>
+        <p class="bookView__price">Цена: {{ book.price }}$</p>
+        <p class="bookView__author" 
+        *ngFor="let author of book.authors">Автора: <span>{{ author.name }}, </span></p>
+        <ion-button (click)="addToBag(book)">Добавить в корзину</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

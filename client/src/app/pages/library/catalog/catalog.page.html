@@ -1,0 +1,70 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <app-with-side-menu></app-with-side-menu>
+    <ion-title>catalog</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+  <app-refresh></app-refresh>
+
+  <ion-searchbar 
+  animated
+  placeholder="Book name..."
+  [(ngModel)]="searchTitle" 
+  class="filterSearch"
+  (ngModelChange)="this.searchTitleUpdate.next($event)"></ion-searchbar>
+  <p class="openFilter"
+  (click)="showMoreFilter()">More filters <ion-icon name="arrow-dropdown"></ion-icon></p>
+
+  <div class="filter" [hidden]="!showFilter">
+      <ion-searchbar 
+      class="filterSearch"
+      animated
+      [(ngModel)]="searchType"
+      (ngModelChange)="this.searchTypeUpdate.next($event)"
+      placeholder="Book type..."></ion-searchbar>
+
+      <ion-searchbar 
+      class="filterSearch"
+      animated
+      [(ngModel)]="searchAuthor"
+      (ngModelChange)="this.searchAuthorUpdate.next($event)"
+      placeholder="Author name..."></ion-searchbar>
+
+      <ion-item>
+        <ion-range 
+        min="0"
+        max="1000"
+        dualKnobs="true" 
+        color="danger" 
+        [(ngModel)]="searchPrice"
+        (ngModelChange)="this.searchPriceUpdate.next($event)"
+        pin="true"></ion-range>
+      </ion-item>
+  </div>
+
+  <section class="catalog">
+    <ion-list>
+      <ion-card *ngFor="let book of books">
+        <ion-card-content class="book">
+          <div class="bookMain" (click)="showBook(book.id)">
+            <ion-card-title class="book__title">{{ book.name }}</ion-card-title>
+            <p class="book__info">{{ book.description }}</p>
+            <p class="book__price">{{ book.price + "$" }}</p>
+          </div>
+          <ion-button class="book__buy" (click)="addToBag(book)">Добавить в корзину</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </section>
+  
+  <ion-infinite-scroll [hidden]="!hideData" threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
