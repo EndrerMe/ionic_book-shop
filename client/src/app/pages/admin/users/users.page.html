@@ -6,7 +6,16 @@
           loadingText="Loading more data...">
           <section class="editUser">
               <button (click)="modalNewUser()" class="btn btn-info">Добавить нового пользователя</button>
-              <div class="allUsers" *ngFor="let user of users">
+              
+              <kengo-grid [data]="users">
+                <kendo-grid-column field="id" title="ID"></kendo-grid-column>
+                <kendo-grid-column field="userName" title="Name"></kendo-grid-column>
+                <kendo-grid-column field="userEmail" title="Email"></kendo-grid-column>
+                <kendo-grid-column field="userGender" title="Gender"></kendo-grid-column>
+                <kendo-grid-column field="userRole" title="Role"></kendo-grid-column>
+              </kengo-grid>
+              
+              <!-- <div class="allUsers" *ngFor="let user of users">
                 <div class="user">
                   <h4 class="user__name">{{ user.userName }}</h4>
                   <span class="user__delete" 
@@ -21,7 +30,7 @@
                   <p class="userInfo__role">Роль пользователя: {{ user.userRole }}</p>
                   <span class="changeuUser" (click)="modalChangeUser(user)">Изменить</span>
                 </div>
-              </div>
+              </div> -->
               <div class="modal" [hidden]="modalVisibility !== true">
                 <div class="modal__main">
                   <div class="main">

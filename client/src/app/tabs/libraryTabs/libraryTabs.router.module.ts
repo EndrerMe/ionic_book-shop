@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // Components
-import { LibraryTabsPage } from './libraryTabs.page';
+import { LibraryTabsPage } from 'src/app/tabs/libraryTabs/libraryTabs.page';
 
 const routes: Routes = [
   {
