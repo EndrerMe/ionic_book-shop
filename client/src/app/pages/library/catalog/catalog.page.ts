@@ -6,10 +6,9 @@ import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
 
 // Sevices
-import { BooksService } from 'src/app/shared/services/books.service';
-import { BagService } from 'src/app/shared/services/bag.service';
+import { BooksService, BagService } from 'src/app/shared/services';
 // Modules
-import { BookModel } from 'src/app/shared/models/book.model';
+import { BookModel } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-catalog',

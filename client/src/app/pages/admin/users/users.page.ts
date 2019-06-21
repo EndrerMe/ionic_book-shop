@@ -7,9 +7,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 // Enums
 import { Gender, userRole } from 'src/app/shared/enums';
 // Services
-import { UserService } from 'src/app/shared/services/user.service';
-import { AuthService } from 'src/app/shared/services/auth.service';
-import { AlertService } from 'src/app/shared/services/alert.service';
+import { UserService, AlertService, AuthService  } from 'src/app/shared/services';
 
 @Component({
   selector: 'app-users',

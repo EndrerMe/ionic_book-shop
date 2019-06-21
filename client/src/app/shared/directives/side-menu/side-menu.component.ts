@@ -1,12 +1,12 @@
 // Vendors
 import { Component, OnInit } from '@angular/core';
 import { Events } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 // Interfaces
 import { IUser } from 'src/app/shared/interfaces';
 // Services
-import { UserService } from 'src/app/shared/services/user.service';
-import { Router } from '@angular/router';
+import { UserService } from 'src/app/shared/services';
 
 @Component({
   selector: 'app-side-menu',

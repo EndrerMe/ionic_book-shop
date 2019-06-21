@@ -3,10 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 // Modules
-import { BookModel } from 'src/app/shared/models/book.model';
+import { BookModel } from 'src/app/shared/models';
 // Services
-import { BooksService } from 'src/app/shared/services/books.service';
-import { IAuthor } from 'src/app/shared/interfaces';
+import { BooksService } from 'src/app/shared/services';
 
 @Component({
   selector: 'app-book-view',

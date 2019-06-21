@@ -6,8 +6,7 @@ import { Router } from '@angular/router';
 // Enums
 import { Gender, userRole } from 'src/app/shared/enums';
 // Services
-import { AuthService } from 'src/app/shared/services/auth.service';
-import { AlertService } from 'src/app/shared/services/alert.service';
+import { AuthService, AlertService } from 'src/app/shared/services';
 
 @Component({
   selector: 'app-regist',

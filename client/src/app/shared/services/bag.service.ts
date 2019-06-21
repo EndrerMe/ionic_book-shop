@@ -1,6 +1,8 @@
 // Vendors
 import { Injectable } from '@angular/core';
-import { BookModel } from 'src/app/shared/models/book.model';
+
+// Models
+import { BookModel } from 'src/app/shared/models';
 
 @Injectable({
     providedIn: 'root'

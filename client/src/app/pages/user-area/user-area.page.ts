@@ -1,8 +1,12 @@
+// Vendors
 import { Component, OnInit } from '@angular/core';
-import { IUser } from 'src/app/shared/interfaces';
 import { Events } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { UserService } from 'src/app/shared/services/user.service';
+
+// Interfaces
+import { IUser } from 'src/app/shared/interfaces';
+// Services
+import { UserService } from 'src/app/shared/services';
 
 @Component({
   selector: 'app-user-area',

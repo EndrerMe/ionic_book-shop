@@ -4,8 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 // Models
-import { BookModel } from 'src/app/shared/models/book.model';
-import { FilterModel } from 'src/app/shared/models/filter.model';
+import { BookModel, FilterModel } from 'src/app/shared/models';
 // Enviroments
 import { environment } from 'src/environments/environment';
 

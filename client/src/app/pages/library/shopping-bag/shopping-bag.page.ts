@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 // Modules
-import { BookModel } from 'src/app/shared/models/book.model';
+import { BookModel } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-shopping-bag',

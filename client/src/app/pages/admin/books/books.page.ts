@@ -1,11 +1,14 @@
+// Vendors
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-import { IAuthor } from 'src/app/shared/interfaces';
-import { BookModel } from 'src/app/shared/models/book.model';
-import { BooksService } from 'src/app/shared/services/books.service';
-import { AuthorsService } from 'src/app/shared/services/authors.service';
-import { AlertService } from 'src/app/shared/services/alert.service';
 import { IonInfiniteScroll } from '@ionic/angular';
+
+// Interfaces
+import { IAuthor } from 'src/app/shared/interfaces';
+// Models
+import { BookModel } from 'src/app/shared/models';
+// Services
+import { BooksService, AuthorsService, AlertService } from 'src/app/shared/services';
 
 @Component({
   selector: 'app-books',

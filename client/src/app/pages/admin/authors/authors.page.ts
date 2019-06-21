@@ -5,8 +5,7 @@ import { IonInfiniteScroll } from '@ionic/angular';
 // Interfaces
 import { IAuthor } from 'src/app/shared/interfaces';
 // Services
-import { AuthorsService } from 'src/app/shared/services/authors.service';
-import { AlertService } from 'src/app/shared/services/alert.service';
+import { AuthorsService, AlertService } from 'src/app/shared/services';
 
 @Component({
   selector: 'app-authors',
