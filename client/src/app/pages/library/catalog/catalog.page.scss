@@ -16,6 +16,7 @@ ion-content {
     .catalog {
         position: relative;
         display: flex;
+        justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
         margin-top: 10px;

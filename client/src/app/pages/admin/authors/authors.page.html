@@ -7,6 +7,9 @@
 
         <section class="editAuthors">
             <button type="button" (click)="showModalAddNewAuthor()" class="btn btn-info">Добавить автора</button>
+
+            <kengo-grid></kengo-grid>
+
             <div class="allAuthors" *ngFor="let author of authors">
               <div class="author">
                 <h4 class="author__name">{{ author.name }}</h4>
